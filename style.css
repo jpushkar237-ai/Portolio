@@ -1,0 +1,546 @@
+/* ========================================================
+   PUSHKAR JAISWAL - BOLD PORTFOLIO STYLESHEET
+   Clean, High-Contrast, Bold Color Palette (Pure HTML & CSS)
+   ======================================================== */
+
+/* CSS Variables for Bold Color Palette */
+:root {
+    --bg-primary: #F8F9FA;
+    --bg-alt: #EFEFEF;
+    --bg-dark: #121316;
+    --text-main: #111317;
+    --text-muted: #4B5563;
+    --text-light: #F9FAFB;
+    --border-color: #111317;
+    
+    /* Bold Signature Colors */
+    --bold-yellow: #FFD600;
+    --bold-orange: #FF4D00;
+    --bold-blue: #2563EB;
+    --bold-green: #059669;
+    --bold-purple: #7C3AED;
+    
+    --border-thickness: 3px;
+    --box-shadow-bold: 5px 5px 0px var(--border-color);
+    --box-shadow-hover: 7px 7px 0px var(--border-color);
+    --box-shadow-active: 2px 2px 0px var(--border-color);
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-primary);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, .nav-logo, .hero-tag, .section-badge, .card-tag, .contact-label {
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* ================= NAVBAR ================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: var(--bg-primary);
+    border-bottom: var(--border-thickness) solid var(--border-color);
+    padding: 16px 0;
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 900;
+    background-color: var(--bold-yellow);
+    padding: 4px 12px;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    color: var(--border-color);
+    transition: transform 0.15s ease;
+}
+
+.nav-logo:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--border-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-links a {
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 6px 12px;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: var(--bold-orange);
+}
+
+.nav-btn {
+    background-color: var(--bold-orange) !important;
+    color: #fff !important;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    padding: 8px 16px !important;
+}
+
+.nav-btn:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 5px 5px 0px var(--border-color);
+    color: #fff !important;
+}
+
+/* ================= HERO SECTION ================= */
+.hero-section {
+    padding: 80px 0 90px 0;
+    background-color: var(--bg-primary);
+    border-bottom: var(--border-thickness) solid var(--border-color);
+}
+
+.hero-tag {
+    display: inline-block;
+    background-color: var(--bold-yellow);
+    color: var(--border-color);
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: 3px 3px 0px var(--border-color);
+    padding: 6px 14px;
+    font-size: 0.85rem;
+    font-weight: 800;
+    margin-bottom: 24px;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.05;
+    margin-bottom: 24px;
+    color: var(--border-color);
+}
+
+.hero-title .highlight {
+    background: linear-gradient(180deg, transparent 65%, var(--bold-yellow) 65%);
+    display: inline;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    max-width: 720px;
+    margin-bottom: 36px;
+    line-height: 1.5;
+}
+
+.hero-subtitle strong {
+    color: var(--text-main);
+    text-decoration: underline decoration-color(var(--bold-orange)) 3px;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+    display: inline-block;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    padding: 14px 26px;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: var(--box-shadow-bold);
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: var(--box-shadow-active);
+}
+
+.btn-primary {
+    background-color: var(--bold-orange);
+    color: #ffffff;
+}
+
+.btn-secondary {
+    background-color: var(--bold-yellow);
+    color: var(--border-color);
+}
+
+.btn-dark {
+    background-color: var(--border-color);
+    color: #ffffff;
+}
+
+/* ================= SECTIONS COMMON ================= */
+.section {
+    padding: 80px 0;
+    border-bottom: var(--border-thickness) solid var(--border-color);
+}
+
+.section-alt {
+    background-color: var(--bg-alt);
+}
+
+.section-badge {
+    display: inline-block;
+    font-size: 0.85rem;
+    font-weight: 800;
+    color: var(--bold-orange);
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+
+.section-title {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    margin-bottom: 14px;
+    color: var(--border-color);
+}
+
+.section-desc {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+    max-width: 650px;
+}
+
+/* ================= ABOUT GRID ================= */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.about-card {
+    background-color: #ffffff;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: var(--box-shadow-bold);
+    padding: 32px;
+}
+
+.about-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 16px;
+    color: var(--border-color);
+}
+
+.about-card p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 16px;
+}
+
+.info-list {
+    list-style: none;
+}
+
+.info-list li {
+    padding: 10px 0;
+    border-bottom: 2px dashed #E2E8F0;
+    font-size: 1rem;
+}
+
+.info-list li:last-child {
+    border-bottom: none;
+}
+
+.info-list strong {
+    color: var(--border-color);
+    display: inline-block;
+    width: 100px;
+}
+
+/* ================= SKILL CARDS ================= */
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 28px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: var(--box-shadow-bold);
+    padding: 30px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 14px;
+}
+
+.card-tag {
+    font-size: 0.75rem;
+    font-weight: 800;
+    padding: 4px 8px;
+    display: inline-block;
+    width: fit-content;
+    border: 2px solid var(--border-color);
+    margin-bottom: 12px;
+    background-color: #fff;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+}
+
+.card p {
+    color: var(--text-muted);
+    font-size: 0.98rem;
+    line-height: 1.55;
+}
+
+/* Bold Card Accent Variations */
+.card-bold-orange {
+    border-top: 10px solid var(--bold-orange);
+}
+.card-bold-orange .card-tag {
+    background-color: #FFF0EB;
+    color: var(--bold-orange);
+}
+
+.card-bold-blue {
+    border-top: 10px solid var(--bold-blue);
+}
+.card-bold-blue .card-tag {
+    background-color: #EFF6FF;
+    color: var(--bold-blue);
+}
+
+.card-bold-yellow {
+    border-top: 10px solid var(--bold-yellow);
+}
+.card-bold-yellow .card-tag {
+    background-color: #FEFCE8;
+    color: #92400E;
+}
+
+.card-bold-green {
+    border-top: 10px solid var(--bold-green);
+}
+.card-bold-green .card-tag {
+    background-color: #ECFDF5;
+    color: var(--bold-green);
+}
+
+.card-bold-purple {
+    border-top: 10px solid var(--bold-purple);
+}
+.card-bold-purple .card-tag {
+    background-color: #F5F3FF;
+    color: var(--bold-purple);
+}
+
+/* ================= ACHIEVEMENTS CARDS ================= */
+.achievement-card {
+    background-color: #ffffff;
+    border: var(--border-thickness) solid var(--border-color);
+    box-shadow: var(--box-shadow-bold);
+    padding: 26px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.achievement-card:hover {
+    transform: translate(-3px, -3px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.achievement-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.achievement-year {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: var(--border-color);
+}
+
+.badge {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 2px solid var(--border-color);
+}
+
+.badge-orange { background-color: var(--bold-orange); color: #fff; }
+.badge-blue { background-color: var(--bold-blue); color: #fff; }
+.badge-yellow { background-color: var(--bold-yellow); color: var(--border-color); }
+.badge-green { background-color: var(--bold-green); color: #fff; }
+
+.achievement-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--border-color);
+}
+
+.achievement-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+/* ================= CONTACT SECTION ================= */
+.section-dark {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+.section-dark .section-badge {
+    color: var(--bold-yellow);
+}
+
+.text-light {
+    color: #ffffff;
+}
+
+.contact-desc {
+    color: #A1A1AA;
+    font-size: 1.15rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.contact-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.contact-item {
+    background-color: #1E2025;
+    border: var(--border-thickness) solid #ffffff;
+    box-shadow: 4px 4px 0px #ffffff;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    transition: transform 0.15s ease, background-color 0.15s ease;
+}
+
+.contact-item:hover {
+    transform: translate(-3px, -3px);
+    background-color: var(--bold-orange);
+}
+
+.contact-label {
+    font-size: 0.8rem;
+    color: var(--bold-yellow);
+    letter-spacing: 1px;
+}
+
+.contact-item:hover .contact-label {
+    color: #ffffff;
+}
+
+.contact-val {
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: #ffffff;
+    word-break: break-all;
+}
+
+/* ================= FOOTER ================= */
+.footer {
+    background-color: var(--bg-dark);
+    border-top: var(--border-thickness) solid #333;
+    padding: 30px 0;
+    color: #71717A;
+    font-size: 0.9rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-sub {
+    font-weight: 600;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a:not(.nav-btn) {
+        display: none;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
